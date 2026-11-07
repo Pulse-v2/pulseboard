@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight, Check, CircleDot, Workflow } from "lucide-react";
 import { BrandMark } from "@/components/layout/brand-mark";
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 
 const stages = ["Collect", "Understand", "Respond"];
 
@@ -17,9 +17,9 @@ export default function Home() {
           >
             Sign in
           </Link>
-          <Button className="h-10 rounded-xl px-4" nativeButton={false} render={<Link href="/signup" />}>
+          <Link className={buttonVariants({ className: "h-10 rounded-xl px-4" })} href="/signup">
             Get started
-          </Button>
+          </Link>
         </nav>
       </header>
 
@@ -39,12 +39,12 @@ export default function Home() {
             happened next.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Button className="h-11 rounded-xl px-5 text-sm" nativeButton={false} render={<Link href="/signup" />}>
+            <Link className={buttonVariants({ className: "h-11 rounded-xl px-5 text-sm" })} href="/signup">
               Create your workspace <ArrowRight aria-hidden="true" />
-            </Button>
-            <Button className="h-11 rounded-xl px-5 text-sm" nativeButton={false} variant="outline" render={<Link href="/login" />}>
+            </Link>
+            <Link className={buttonVariants({ variant: "outline", className: "h-11 rounded-xl px-5 text-sm" })} href="/login">
               Sign in to Pulseboard
-            </Button>
+            </Link>
           </div>
           <div className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-xs text-slate-500">
             <span className="inline-flex items-center gap-2">
