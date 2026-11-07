@@ -1,0 +1,2 @@
+-- Demo data is intentionally added in Phase 3. Keep this file so local db reset
+-- has a stable seed path without presenting placeholder rows as real data.
